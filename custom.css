@@ -1,0 +1,67 @@
+p > span{
+  text-decoration: underline;
+}
+
+#face-container{
+  text-align: center;
+  border-right: 4px solid black;
+  height: 100%
+}
+
+#title-container{
+  text-align: center;
+}
+
+#title-container img{
+  width: 260px;
+}
+
+#title-container h2{
+  font-size: 65px;
+  margin-top: 0px;
+}
+
+#title-container h1{
+  margin-top: 30px;
+  margin-bottom: 0px;
+}
+
+#face-image{
+  width: 150px;
+  margin-top: 40px;
+}
+
+.container{
+  border-right: 4px solid black;
+  border-left: 4px solid black;
+  border-bottom: 4px solid black;
+  padding-left: 20px;
+  padding-right:  20px;
+}
+
+.container.first {
+  padding-left: 0px;
+  padding-right: 0px;
+  border-top: 4px solid black;
+  height: 250px;
+
+}
+
+#inputs, #text{
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+#text p{
+  font-size: 20px;
+}
+
+input{
+  margin-top: 10px; 
+  padding-left: 5px;
+}
+
+.wrapper{
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
