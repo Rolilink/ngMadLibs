@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="">
+<html lang="en" ng-app="madlibs">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,9 +8,9 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="custom.css">
    <script src="http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.14/angular.min.js"></script>
+   <script src="madlibs.js"></script>
   </head>
-  <body ng-init="female_name = 'female name'; job_title = 'job title'; tedious_task = 'tedious task'; dirty_task = 'dirty task'; celebrity = 'celebrity'; useless_skill = 'useless skill'; obnoxious_celebrity = 'obnoxious celebrity'; huge_number = 'huge number'; adjective = 'adjective';">
-    <div class="wrapper">
+    <div class="wrapper" ng-controller="controller">
       <div class="row">
         <div class="container first">
           <div class="col-md-4" id="face-container">
@@ -68,7 +68,7 @@
         <div class="container" id="text">
           <p><span> {{female_name}} </span> was a <span>{{job_title}}</span> who loved technology. Although she loved parts of her job, she absolutely hated  <span>{{tedious_task}}</span> and <span>{{dirty_task}}</span>. So, <span>{{female_name}}</span> met with her life mentor <span>{{celebrity}}</span> who told her to learn how to <span>{{useless_skill}}</span> with Thinkful. Thinkful didn't offer a course on <span>{{useless_skill}}</span> so she studied programming instead.</p>
    
-        <p> What a great decision! With her new skills, <span>{{female_name}}</span> built a(n) <span>{{adjective}}</span> robot named <span>{{obnoxious_celbertity}}</span> that not only loved <span>{{dirty_task}}</span> but did it <span>{{huge_number}}</span> faster.</p>
+        <p> What a great decision! With her new skills, <span>{{female_name}}</span> built a(n) <span>{{adjective}}</span> robot named <span>{{obnoxious_celebrity}}</span> that not only loved <span>{{dirty_task}}</span> but did it <span>{{huge_number}}</span> faster.</p>
         </div>
       </div>
     </div>
