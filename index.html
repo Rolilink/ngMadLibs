@@ -26,49 +26,56 @@
         </div>
         </div>
       </div>
-      <div class="row">
-        <div class="container" id="inputs">
-          <h3>Provide the following words:</h3>
-        <div class="col-md-4">
-          <div class="form-group">
-            <input type="text" ng-model="female_name" class="form-contol" placeholder="Female Name">
+      <div class="row" ng-show="page === 'form'" ng-hide="page !== 'form'">
+        <form name="words" ng-submit="goToResult()">
+          <div class="container" id="inputs" >
+            <h3>Provide the following words:</h3>
+            <div class="col-md-4">
+              <div class="form-group">
+                <input type="text" ng-model="female_name" class="form-contol" placeholder="Female Name" required>
+              </div>
+              <div class="form-group">
+                <input type="text" ng-model="job_title" class="form-contol" placeholder="Job Title" required>
+              </div>
+              <div class="form-group">
+                <input type="text" ng-model="tedious_task" class="form-contol" placeholder="Tedious Task" required>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="form-group">
+                <input type="text" ng-model="dirty_task" class="form-contol" placeholder="Dirty Task" required>
+              </div>
+              <div class="form-group">
+                <input type="text" ng-model="celebrity" class="form-contol" placeholder="Celebrity" required>
+              </div>
+              <div class="form-group">
+                <input type="text" ng-model="useless_skill" class="form-contol" placeholder="Useless Skill" required>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="form-group">
+                <input type="text" ng-model="obnoxious_celebrity" class="form-contol" placeholder="Obnoxious Celebrity" required>
+              </div>
+              <div class="form-group">
+                <input type="number" ng-model="huge_number" class="form-contol" placeholder="Huge Number" required>
+              </div>
+              <div class="form-group">
+                <input type="text" ng-model="adjective" class="form-contol" placeholder="Adjective" required>
+              </div>
+            </div>
+            <div class="col-md-12 text-right">
+              <input type="submit" value="Generate My MadLib" class="btn btn-primary" required>
+            </div>
           </div>
-          <div class="form-group">
-            <input type="text" ng-model="job_title" class="form-contol" placeholder="Job Title">
-          </div>
-          <div class="form-group">
-            <input type="text" ng-model="tedious_task" class="form-contol" placeholder="Tedious Task">
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="form-group">
-            <input type="text" ng-model="dirty_task" class="form-contol" placeholder="Dirty Task">
-          </div>
-          <div class="form-group">
-            <input type="text" ng-model="celebrity" class="form-contol" placeholder="Celebrity">
-          </div>
-          <div class="form-group">
-            <input type="text" ng-model="useless_skill" class="form-contol" placeholder="Useless Skill">
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="form-group">
-            <input type="text" ng-model="obnoxious_celebrity" class="form-contol" placeholder="Obnoxious Celebrity">
-          </div>
-          <div class="form-group">
-            <input type="text" ng-model="huge_number" class="form-contol" placeholder="Huge Number">
-          </div>
-          <div class="form-group">
-            <input type="text" ng-model="adjective" class="form-contol" placeholder="Adjective">
-          </div>
-        </div>
-        </div>
+        </form>
       </div>
-      <div class="row">
+      <div class="row" ng-show="page === 'result'" ng-hide="page !== 'result'">
         <div class="container" id="text">
           <p><span> {{female_name}} </span> was a <span>{{job_title}}</span> who loved technology. Although she loved parts of her job, she absolutely hated  <span>{{tedious_task}}</span> and <span>{{dirty_task}}</span>. So, <span>{{female_name}}</span> met with her life mentor <span>{{celebrity}}</span> who told her to learn how to <span>{{useless_skill}}</span> with Thinkful. Thinkful didn't offer a course on <span>{{useless_skill}}</span> so she studied programming instead.</p>
    
-        <p> What a great decision! With her new skills, <span>{{female_name}}</span> built a(n) <span>{{adjective}}</span> robot named <span>{{obnoxious_celebrity}}</span> that not only loved <span>{{dirty_task}}</span> but did it <span>{{huge_number}}</span> faster.</p>
+          <p> What a great decision! With her new skills, <span>{{female_name}}</span> built a(n) <span>{{adjective}}</span> robot named <span>{{obnoxious_celebrity}}</span> that not only loved <span>{{dirty_task}}</span> but did it <span>{{huge_number}}</span> faster.</p>
+
+          <a href="#" ng-click="goToForm()" class="btn btn-danger text-right">Return To Form</a>
         </div>
       </div>
     </div>

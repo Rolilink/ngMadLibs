@@ -13,9 +13,18 @@ var initializeScope = function initializeScope($scope){
   $scope.obnoxious_celebrity = 'Obnoxious Celebrity';
   $scope.huge_number = 'Huge Number';
   $scope.adjective = 'Adjective';
+  $scope.page = 'form';
 }
 
 angular.module('madlibs', [])
   .controller('controller',function($scope){
     initializeScope($scope);
+
+    $scope.goToForm = function(){
+      initializeScope($scope);
+    };
+
+    $scope.goToResult = function(){
+      $scope.page = 'result';
+    };
   });
